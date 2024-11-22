@@ -47,4 +47,5 @@ Add functionality to refresh and revoke tokens as needed.
 
 ### Demo
 
-<video src='https://github.com/raulcabello/rancher-oidc-provider/raw/refs/heads/main/video.mp4' width="300" />
+https://github.com/user-attachments/assets/6f2fcbad-7452-4786-856e-384b04d8ee0c
+
