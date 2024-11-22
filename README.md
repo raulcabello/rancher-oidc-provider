@@ -22,14 +22,14 @@ Acts as the entry point for the authorization code flow. Rancher detects the ena
 - Token Endpoint
 
 `$(HOST)/oidc/token`
-Returns a JSON Web Token (JWT) containing user and group information retrieved from the authentication provider. This token can be used for Kubernetes authentication, including local and downstream clusters, using tools like kubelogin.
+Returns a JSON Web Token (JWT) containing user and group information retrieved from the authentication provider. This token can be used for Kubernetes authentication, including local and downstream clusters, using tools like [kubelogin](https://github.com/int128/kubelogin).
 
 ### Configuring Kubernetes for OIDC Authentication
 
-Kubernetes clusters must be configured to support OIDC authentication. This is achieved by enabling the appropriate flags in the kube-apiserver. For detailed instructions, refer to the Kubernetes documentation on OIDC authentication.
+Kubernetes clusters must be configured to support OIDC authentication. This is achieved by enabling the appropriate flags in the kube-apiserver. For detailed instructions, refer to the [Kubernetes documentation on OIDC authentication](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#using-flags).
 
 ### Direct Cluster Communication:
-Authentication tokens can be used directly to interact with downstream clusters without relying on the Rancher proxy. For details, see the Rancher Manager Architecture documentation.
+Authentication tokens can be used directly to interact with downstream clusters without relying on the Rancher proxy. For details, see the [Rancher documentation](https://ranchermanager.docs.rancher.com/reference-guides/rancher-manager-architecture/communicating-with-downstream-user-clusters).
 This eliminates the need for impersonation resources in downstream clusters.
 
 ### Areas for Improvement:
@@ -49,3 +49,8 @@ Add functionality to refresh and revoke tokens as needed.
 
 https://github.com/user-attachments/assets/6f2fcbad-7452-4786-856e-384b04d8ee0c
 
+### Source code
+
+OIDC provider implemented using https://github.com/ory/fosite
+
+Source code -> https://github.com/raulcabello/rancher/tree/oidc-provider
