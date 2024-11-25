@@ -34,7 +34,7 @@ This eliminates the need for impersonation resources in downstream clusters.
 
 ### Areas for Improvement:
 - Limited Provider Support:
-Currently, only Keycloak, OpenLDAP, and SAML are supported.
+Currently, only Keycloak and OpenLDAP are supported.
 
 - Hardcoded OIDC Parameters:
 OIDC parameters such as ClientID and redirectURL are hardcoded and need to be configurable.
